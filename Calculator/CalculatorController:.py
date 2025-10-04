@@ -45,6 +45,7 @@ class CalculatorController:
             print("P. Power (^)")
             print("R. Square Root (sqrt)")
             print("L. Logarithm (log)")
+            print("N. Nth Root (x^1/n)")
             print("Z. Change Mode")
 
         print("W. Exit Program")
@@ -53,7 +54,6 @@ class CalculatorController:
         """Submenu for memory operations."""
         while True:
             print("\n--- MEMORY MENU ---")
-            # Używamy już przetłumaczonych metod m_recall i m_clear
             mem_choice = input("Select operation (M+: Add, MR: Recall, MC: Clear, W: Back to Menu): ").upper()
 
             if mem_choice == 'W':
@@ -116,10 +116,10 @@ class CalculatorController:
                     result = self.calculator.modulo(num1, num2)
 
             # --- ADVANCED OPERATIONS (Power/Logarithm - 2 args.) ---
-            elif is_advanced and choice in ('P', 'L'):
+            elif is_advanced and choice in ('P', 'L', 'N'):
                 try:
-                    num1 = float(input("Enter base/number: "))
-                    num2 = float(input("Enter exponent/base: "))
+                    num1 = float(input("Enter number (x): "))
+                    num2 = float(input("Enter root degree (n): "))
                 except ValueError:
                     print("Invalid number. Please try again.")
                     continue
@@ -128,6 +128,8 @@ class CalculatorController:
                     result = self.calculator.power(num1, num2)
                 elif choice == 'L':
                     result = self.calculator.logarithm(num1, num2)
+                elif choice == 'N':
+                    result = self.calculator.nth_root(num1, num2)
 
             # --- ADVANCED OPERATIONS (Square Root - 1 arg.) ---
             elif is_advanced and choice == 'R':
