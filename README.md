@@ -18,7 +18,7 @@ Technology Stack (Technologie)
 Getting Started (Jak Odtworzyc Projekt)
 1. Requirements - install Python 3.13.7
 2. Cloning the Repository: git clone https://github.com/Magdaa1/Calculator.git
-3. Running the Calculator  python CalculatorController:.py
+3. Running the Calculator  python calculator_controler.py
 4. Usage:
    - Select Mode: Choose 1 (Basic) or 2 (Advance)
    - Navigate Menu: Use number (1-5) for basic operation or letter (P, R, L, N) for advance
