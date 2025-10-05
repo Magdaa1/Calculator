@@ -1,0 +1,10 @@
+# Pliki środowisk wirtualnych
+.venv/
+venv/
+
+# Pliki PyChama (i innych IDE JetBrains)
+.idea/
+
+# Pliki kompilacji Pythona
+*.pyc
+__pycache__/
